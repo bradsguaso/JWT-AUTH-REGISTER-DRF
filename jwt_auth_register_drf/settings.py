@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'dj_rest_auth'
+    'dj_rest_auth',
+    'users_accounts'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,5 @@ REST_AUTH = {
     "JWT_AUTH_REFRESH_COOKIE": "_refresh",  # Name of refresh token cookie
     "JWT_AUTH_HTTPONLY": False,  # Makes sure refresh token is sent
 }
+
+AUTH_USER_MODEL = 'users_accounts.CustomUser'
